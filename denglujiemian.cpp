@@ -29,9 +29,13 @@ void time_break1()/*跳转等待2秒的函数*/
 	system("cls");
 }
 
-void denglujiemian::denglujiemian()
+void denglu::denglujiemian()    
+/*
+ void denglujiemian::denglujiemian()  ：：表示得是命名空间得调用，你前面对应得是denglujiemian
+ 									  但是反过来想想，你有这个类吗？ 
+ */
 {
-		int num=4;
+	int num=4;
 	int mun=4; 
 	int password;
 	const int password1=123456;
@@ -49,14 +53,14 @@ void denglujiemian::denglujiemian()
 	HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
 	
 	loop1:
-	ifstream read1("C:\\Users\\10754\\Desktop\\封面一号.txt",ios::in);
+	ifstream read1("封面一号.txt",ios::in);
     char temp1[5000]={};
     read1.getline(temp1,5000,0);
     cout<<temp1<<endl;
 	cout<<"#                                                                       ";
 	cout<<"请输入账号: ";
 	cout<<"                                                                             #"<<endl;
-	ifstream read2("C:\\Users\\10754\\Desktop\\封面二号.txt",ios::in);
+	ifstream read2("封面二号.txt",ios::in);
     char temp2[5000]={};
     read2.getline(temp2,5000,0);
     cout<<temp2<<endl; 
@@ -94,7 +98,7 @@ void denglujiemian::denglujiemian()
 	          if(num<4 && num>1)
 			  {
 	            time_break0();
-	            ifstream read3("C:\\Users\\10754\\Desktop\\封面三号.txt",ios::in);
+	            ifstream read3("封面三号.txt",ios::in);
                 char temp3[5000]={};
                 read3.getline(temp3,5000,0);
                 cout<<temp3<<endl;
@@ -104,7 +108,7 @@ void denglujiemian::denglujiemian()
 	            cout<<"￥                                                                   "; 
 	            cout<<"您还有"<<" "<<num-1<<"次机会输入账号";
 	            cout<<"                                                                      ￥"<<endl; 
-	            ifstream read4("C:\\Users\\10754\\Desktop\\封面四号.txt",ios::in);
+	            ifstream read4("封面四号.txt",ios::in);
                 char temp4[5000]={};
                 read4.getline(temp4,5000,0);
                 cout<<temp4<<endl;
@@ -117,14 +121,14 @@ void denglujiemian::denglujiemian()
 	        {
 	        	system("cls");
 	        	time_break0;
-	        	fstream read3("C:\\Users\\10754\\Desktop\\封面三号.txt",ios::in);
+	        	fstream read3("封面三号.txt",ios::in);
                 char temp3[5000]={};
                 read3.getline(temp3,5000,0);
                 cout<<temp3<<endl;
                 cout<<"￥                                                     "; 
 			  	cout<<"账号错误, 3次机会已经用完！";
 			  	cout<<"                                                                               ￥"<<endl; 
-			  	ifstream read4("C:\\Users\\10754\\Desktop\\封面四号.txt",ios::in);
+			  	ifstream read4("封面四号.txt",ios::in);
                 char temp4[5000]={};
                 read4.getline(temp4,5000,0);
                 cout<<temp4<<endl;
@@ -133,14 +137,14 @@ void denglujiemian::denglujiemian()
           }
     system("cls");
     loop2:
-	ifstream read5("C:\\Users\\10754\\Desktop\\封面一号.txt",ios::in);
+	ifstream read5("封面一号.txt",ios::in);
                 char temp5[5000]={};
                 read5.getline(temp5,5000,0);
                 cout<<temp5<<endl;
 	            cout<<"*                                                                       ";
 	            cout<<"请输入密码: ";
 	            cout<<"                                                                             *"<<endl;
-	ifstream read6("C:\\Users\\10754\\Desktop\\封面二号.txt",ios::in);
+	ifstream read6("封面二号.txt",ios::in);
                 char temp6[5000]={};
                 read6.getline(temp6,5000,0);
                 cout<<temp6<<endl; 
@@ -150,7 +154,7 @@ void denglujiemian::denglujiemian()
 	if(key==key0)
 	{
 	  time_break0();
-	          ifstream read3("C:\\Users\\10754\\Desktop\\封面三号.txt",ios::in);
+	          ifstream read3("封面三号.txt",ios::in);
               char temp3[5000]={};
               read3.getline(temp3,5000,0);
               cout<<temp3<<endl;
@@ -159,11 +163,12 @@ void denglujiemian::denglujiemian()
 	          cout<<"                                                                             ￥"<<endl; 
 	          cout<<"￥                                                                   "; 
 	          cout<<"                                                                                            ￥"<<endl; 
-	          ifstream read4("C:\\Users\\10754\\Desktop\\封面四号.txt",ios::in);
+	          ifstream read4("封面四号.txt",ios::in);
               char temp4[5000]={};
               read4.getline(temp4,5000,0);
               cout<<temp4<<endl;
               time_break1();
+              system("cls");
     }
 	else
 	    {
@@ -173,7 +178,7 @@ void denglujiemian::denglujiemian()
 	          if(mun<4 && mun>1)
 			  {
 	          time_break0();
-	          ifstream read3("C:\\Users\\10754\\Desktop\\封面三号.txt",ios::in);
+	          ifstream read3("封面三号.txt",ios::in);
               char temp3[5000]={};
               read3.getline(temp3,5000,0);
               cout<<temp3<<endl;
@@ -183,7 +188,7 @@ void denglujiemian::denglujiemian()
 	          cout<<"￥                                                                   "; 
 	          cout<<"您还有"<<" "<<mun-1<<"次机会输入密码";
 	          cout<<"                                                                      ￥"<<endl; 
-	          ifstream read4("C:\\Users\\10754\\Desktop\\封面四号.txt",ios::in);
+	          ifstream read4("封面四号.txt",ios::in);
               char temp4[5000]={};
               read4.getline(temp4,5000,0);
               cout<<temp4<<endl;
@@ -198,14 +203,14 @@ void denglujiemian::denglujiemian()
 	    {
 	        system("cls");
 	        time_break0;
-	        fstream read3("C:\\Users\\10754\\Desktop\\封面三号.txt",ios::in);
+	        fstream read3("封面三号.txt",ios::in);
             char temp3[5000]={};
             read3.getline(temp3,5000,0);
             cout<<temp3<<endl;
             cout<<"￥                                                     "; 
 			cout<<"密码错误, 3次机会已经用完！";
 			cout<<"                                                                               ￥"<<endl; 
-			ifstream read4("C:\\Users\\10754\\Desktop\\封面四号.txt",ios::in);
+			ifstream read4("封面四号.txt",ios::in);
             char temp4[5000]={};
             read4.getline(temp4,5000,0);
             cout<<temp4<<endl;
@@ -214,4 +219,5 @@ void denglujiemian::denglujiemian()
         } 
 	  getchar();
 }
-} 
+// } 你在这里写多了一个括号 
+

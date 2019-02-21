@@ -1,0 +1,38 @@
+# Project: kfc点餐系统
+# Makefile created by Dev-C++ 5.4.0
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = main.o denglujiemian.o reading.o xkchange.o $(RES)
+LINKOBJ  = main.o denglujiemian.o reading.o xkchange.o $(RES)
+LIBS     = -L"C:/Users/10754/Desktop/Dev-Cpp/Dev-Cpp/MinGW32/lib" -static-libstdc++ -static-libgcc
+INCS     = -I"C:/Users/10754/Desktop/Dev-Cpp/Dev-Cpp/MinGW32/include"
+CXXINCS  = -I"C:/Users/10754/Desktop/Dev-Cpp/Dev-Cpp/MinGW32/include"
+BIN      = kfc点餐系统.exe
+CXXFLAGS = $(CXXINCS) 
+CFLAGS   = $(INCS) 
+RM       = rm -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+main.o: main.cpp
+	$(CPP) -c main.cpp -o main.o $(CXXFLAGS)
+
+denglujiemian.o: denglujiemian.cpp
+	$(CPP) -c denglujiemian.cpp -o denglujiemian.o $(CXXFLAGS)
+
+reading.o: reading.cpp
+	$(CPP) -c reading.cpp -o reading.o $(CXXFLAGS)
+
+xkchange.o: xkchange.cpp
+	$(CPP) -c xkchange.cpp -o xkchange.o $(CXXFLAGS)
