@@ -51,3 +51,4 @@ void change_()/*让客户选择是继续点餐or取消金额or结账*/
     read.close();
 } 
 
+
